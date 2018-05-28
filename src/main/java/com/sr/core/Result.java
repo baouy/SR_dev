@@ -12,11 +12,11 @@ public class Result<T> {
 
     private boolean success = false;  //业务是否成功
 
-    private T model;     //具体数据对象
+    private T model;     //数据对象
 
     private BaseQuery query; //查询对象
 
-    private T data;//后台管理存储对象
+    private T data;//BJUI数据存储对象
 
     public T getData() {
         return data;
@@ -65,7 +65,7 @@ public class Result<T> {
     }
 
     public void defaultFailure(){
-        this.success = true;
+        this.success = false;
         this.code = ResultEnum.FAIL.getCode();
         this.msg = ResultEnum.FAIL.getMsg();
     }

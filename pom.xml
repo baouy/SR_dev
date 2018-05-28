@@ -59,7 +59,18 @@
       <version>1.1.0</version>
     </dependency>
 
+    <!--apache权限框架的缓存管理器-->
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-all</artifactId>
+      <version>${shiro-version}</version>
+    </dependency>
 
+    <dependency>
+      <groupId>org.crazycake</groupId>
+      <artifactId>shiro-redis</artifactId>
+      <version>2.4.2.1-RELEASE</version>
+    </dependency>
 
 
     <!-- spring 数据校验-->

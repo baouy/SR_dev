@@ -1,5 +1,5 @@
 # SR_dev
-dev  for  ZheJiang SHUREN University  Information   And   Sicence Technology  college  
+dev  for  ZheJiang SHUREN Univercity , Information   And   Sicence Technology  College  
 
 ## 代码编译和使用
 
