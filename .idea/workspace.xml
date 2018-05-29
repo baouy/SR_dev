@@ -7,12 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7855d5b-a699-4bec-81c0-15336f202110" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/erp/images/sr_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/erp/images/sr_logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sr/utils/MathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sr/utils/MathUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sr/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sr/utils/StringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,8 +33,13 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/erp/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+            <state relative-caret-position="419">
+              <caret line="100" column="18" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="18" />
+              <folding>
+                <element signature="e#1380#3622#0" />
+                <element signature="e#3804#3861#0" />
+                <element signature="e#3883#3912#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,6 +60,7 @@
       <find>shiro</find>
       <find>img</find>
       <find>background</find>
+      <find>logo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,7 +126,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-38" />
     <option name="y" value="6" />
     <option name="width" value="1936" />
@@ -443,7 +445,7 @@
       <workItem from="1527315659623" duration="4854000" />
       <workItem from="1527488280597" duration="1558000" />
       <workItem from="1527561885050" duration="445000" />
-      <workItem from="1527562555222" duration="3400000" />
+      <workItem from="1527562555222" duration="5110000" />
     </task>
     <task id="LOCAL-00001" summary=" -----">
       <created>1527311213880</created>
@@ -463,18 +465,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17666000" />
+    <option name="totallyTimeSpent" value="19376000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" weight="0.75418997" />
       <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.49840087" weight="0.32960895" />
       <window_info anchor="bottom" id="JRebel Console" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.13752665" />
-      <window_info anchor="bottom" id="JRebel Executor" order="7" sideWeight="0.49946696" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="JRebel Executor" order="7" sideWeight="0.49946696" visible="true" weight="0.032402236" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="CDI" order="3" />
       <window_info id="Capture Tool" order="2" />
@@ -729,8 +730,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/erp/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="94" column="13" lean-forward="true" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+        <state relative-caret-position="419">
+          <caret line="100" column="18" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="18" />
+          <folding>
+            <element signature="e#1380#3622#0" />
+            <element signature="e#3804#3861#0" />
+            <element signature="e#3883#3912#0" />
+          </folding>
         </state>
       </provider>
     </entry>

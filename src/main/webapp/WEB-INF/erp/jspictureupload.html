@@ -1,0 +1,70 @@
+<!--//总经办审批-->
+<!--WEB-INF/erp/DesignManageMent/sjpreferentexamination.html-->
+<!--WEB-INF/erp/DesignManageMent/sjpreferentexamination.html-->
+<!--com.meiwo.controller.api.designer.SjpreferentexaminController-->
+    <script type="text/javascript">
+
+       var   picture_data=null; var currentDialogTitle = $.CurrentDialog.find("h1");
+        function pic_upload_success(file, data) {
+            debugger;
+            var json = $.parseJSON(data)
+            $(this).bjuiajax('ajaxDone', json)
+            debugger;
+             if (json.code == 1001) {
+
+//                 picture_data = '{enclosurename:'+file.name +',enclosure:\"'+json.content+'\"}'
+//                 picture_data = '{enclosurename:'+file.name +',enclosure:'+json.content+'}'
+                 picture_data = '{enclosure:\"'+json.data.enclosure+'\",enclosurename:\"'+json.data.enclosurename+'\"}'
+                 //$('#xcitem_imageurl').val(json.content).trigger('validate')
+                 //alert(json.content);
+                 $('#j_custom_span_pic').html('<img onclick="onclick_showImages(\''+ json.data.enclosure  +'\')\" src='+ json.data.enclosure+'  width="150"/>')
+                 ;
+
+
+
+//                 var datas = '{otheritemid:'+datas[0].id +',itemize:\"'+datas[0].itemize+'\",company:\"'+ datas[0].company+'\",remarks:\"'+datas[0].remarks+'\",unitprice:\"'+datas[0].unitprice+'\"}';
+//                 $('#jsxcitem_selected').attr("data-args",datas);
+//                 obj = {
+//                     type: drawing_select_typeid,
+//                     customerid: xcdesign_selected_custid,
+//                     state: drawing_select_stateid,
+//                     link: json.content
+//                     name: file.name
+//                 };
+//
+//                 picture_arr.push(obj);
+             }
+
+            }
+     function js_picture_selected() {
+            debugger
+            if (picture_data==null){
+                $(this).alertmsg('warn', '请上传文件在提交');
+              return;
+            }
+            debugger;
+         $('#jspicture_selected').attr("data-args",picture_data);
+         BJUI.dialog('closeCurrent',this);
+
+
+ }
+
+    </script>
+<div class="bjui-pageContent" >
+    <div>
+        <a href="javascript:;" data-toggle="lookupback" onclick="js_picture_selected()" class="btn btn-blue" data-args="" title="选择本项" data-icon="check" id="jspicture_selected"><i class="fa fa-check"></i> 选择</a>
+        <button type="button" class="btn-close btn" data-icon="close"><i class="fa fa-close"></i> 关闭</button>
+    </div>
+
+    <div style="display: inline-block; vertical-align: middle;margin-top: 20px">
+        <div id="j_custom_pic_up" data-toggle="upload" data-uploader="/upfile/fileupload"
+             data-file-size-limit="1024000000"
+             data-file-type-exts="*.jpg;*.png;*.gif;*.mpg;*.doc;*.pdf;*.xlsx;.dwg"
+             data-multi="false"
+             data-on-upload-success="pic_upload_success"
+             data-icon="cloud-upload"></div>
+        <input type="hidden" name="imageurl" value="" id="xcitem_imageurl">
+        <span id="j_custom_span_pic"></span>
+    </div>
+
+</div>
