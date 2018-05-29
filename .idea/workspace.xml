@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7855d5b-a699-4bec-81c0-15336f202110" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_extensions_guice_multibindings_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_all_1_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_guice_1_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_crazycake_shiro_redis_2_4_2_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sr/core/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sr/core/RedisOperationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SRCloud_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SRCloud_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sr/core/CounterManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sr/core/HttpManage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sr/utils/ExcelImportUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sr/utils/TimeUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SRCloud.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SRCloud.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sr/core/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sr/core/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sr/core/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sr/core/Constants.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,71 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="272" selection-start-line="272" selection-end-line="272" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RedisOperationManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/RedisOperationManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1136#1137#0" expanded="true" />
-                <element signature="e#1216#1217#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-              <folding>
-                <element signature="e#133#134#0" expanded="true" />
-                <element signature="e#170#171#0" expanded="true" />
-                <element signature="e#235#236#0" expanded="true" />
-                <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#596#597#0" expanded="true" />
-                <element signature="e#642#643#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#775#776#0" expanded="true" />
-                <element signature="e#813#814#0" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
-                <element signature="e#890#891#0" expanded="true" />
-                <element signature="e#948#949#0" expanded="true" />
-                <element signature="e#986#987#0" expanded="true" />
-                <element signature="e#1033#1034#0" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1177#1178#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QiNiuUpLoad.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/QiNiuUpLoad.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -135,7 +61,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sr/core/Constant.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sr/core/RedisOperationManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sr/core/HttpManage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sr/utils/DESUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sr/utils/ExcelImportUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sr/core/Constants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sr/utils/TimeUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sr/core/CounterManage.java" />
       </list>
     </option>
   </component>
@@ -198,23 +129,6 @@
               <item name="SRCloud" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SRCloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SRCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sr" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SRCloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SRCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -239,6 +153,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sr.utils" />
       <recent name="com.sr.core" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -425,7 +340,7 @@
       <updated>1527301897345</updated>
       <workItem from="1527301898761" duration="7409000" />
       <workItem from="1527315659623" duration="4854000" />
-      <workItem from="1527488280597" duration="489000" />
+      <workItem from="1527488280597" duration="1558000" />
     </task>
     <task id="LOCAL-00001" summary=" -----">
       <created>1527311213880</created>
@@ -445,15 +360,14 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12752000" />
+    <option name="totallyTimeSpent" value="13821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Application Servers" order="8" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Application Servers" order="8" sideWeight="0.49946696" visible="true" weight="0.32960895" />
       <window_info anchor="bottom" id="JRebel Console" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="JRebel Executor" order="7" />
@@ -468,6 +382,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.11371238" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
@@ -485,7 +400,6 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.11371238" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -524,7 +438,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CodeGenerator.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/utils/DESUtil.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/BaseQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -533,13 +446,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/cmdada.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/utils/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/ManageBasePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -623,68 +529,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1200">
-            <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="8160">
           <caret line="272" selection-start-line="272" selection-end-line="272" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/QiNiuUpLoad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="11" selection-start-line="11" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/RedisOperationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" selection-start-line="9" selection-end-line="11" selection-end-column="3" />
+        <state relative-caret-position="-330">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/QiNiuUpLoad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="17" column="81" lean-forward="true" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/utils/DESUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/utils/ExcelImportUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/HttpManage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" selection-start-line="6" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/utils/TimeUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/CounterManage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/utils/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sr/core/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        <state relative-caret-position="450">
+          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
           <folding>
-            <element signature="e#133#134#0" expanded="true" />
-            <element signature="e#170#171#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#596#597#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#775#776#0" expanded="true" />
             <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
-            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
             <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="488">
+            <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

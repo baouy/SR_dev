@@ -15,6 +15,9 @@ public class Constants {
 
     public static Integer REDIS_TIMEOUR;
 
+
+    public final static  String sztz="sztz";
+
     public static String getRedisPassword() {
         return REDIS_PASSWORD;
     }
