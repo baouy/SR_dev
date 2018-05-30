@@ -99,8 +99,8 @@ $(function(){
 });
 //更换背景
 function choose_bg() {
-    var bg = Math.floor(Math.random() * 9 + 1);
-    $('body').css('background-image', 'url(images/loginbg_0'+ bg +'.jpg)');
+    var bgNum = Math.floor(Math.random() * 6 + 1);
+    $('body').css('background-image', 'url(images/sr_bg'+ bgNum +'.jpg)');
 }
 //重置按钮
 function reset(){
@@ -172,7 +172,7 @@ function findpwd(){
             </div>
             <div class="text-center">
                 <hr>
-                2017 - 2018 <a href="login.html">浙江树人大学素质拓展分系统</a>
+                2017 - 2018 <a href="#"  onclick="choose_bg()">浙江树人大学素质拓展分系统</a>
             </div>
     </div>
 </div>
