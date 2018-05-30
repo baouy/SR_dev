@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="喵喵管理后台">
+	<link rel="icon" href="images/logo.png" mce_href="images/logo.png" type="image/x-icon">
+	<title>喵喵管理后台</title>
+	<!-- bootstrap - css -->
+	<link href="BJUI/themes/css/bootstrap.css" rel="stylesheet">
+	<!-- core - css -->
+	<link href="BJUI/themes/css/style.css" rel="stylesheet">
+	<link href="BJUI/themes/blue/core.css" id="bjui-link-theme" rel="stylesheet">
+	<!-- plug - css -->
+	<link href="BJUI/plugins/kindeditor_4.1.10/themes/default/default.css" rel="stylesheet">
+	<link href="BJUI/plugins/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+	<link href="BJUI/plugins/niceValidator/jquery.validator.css" rel="stylesheet">
+	<link href="BJUI/plugins/bootstrapSelect/bootstrap-select.css" rel="stylesheet">
+	<link href="BJUI/themes/css/FA/css/font-awesome.min.css" rel="stylesheet">
+	<!--[if lte IE 7]>
+	<link href="BJUI/themes/css/ie7.css" rel="stylesheet">
+	<![endif]-->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lte IE 9]>
+	<script src="BJUI/other/html5shiv.min.js"></script>
+	<script src="BJUI/other/respond.min.js"></script>
+	<![endif]-->
+	<!-- jquery -->
+	<script src="BJUI/js/jquery-1.11.3.min.js"></script>
+	<script src="BJUI/js/jquery.cookie.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="BJUI/plugins/viewer/viewer.min.css">
+	<script src="BJUI/plugins/viewer/viewer.min.js"></script>
+	<!--[if lte IE 9]>
+	<script src="BJUI/other/jquery.iframe-transport.js"></script>
+	<![endif]-->
+	<!-- BJUI.all 分模块压缩版 -->
+	<script src="BJUI/js/bjui-all.js"></script>
+	<!-- 以下是B-JUI的分模块未压缩版，建议开发调试阶段使用下面的版本 -->
+	<script src="http://cdn.staticfile.org/Plupload/2.1.1/moxie.min.js"></script>
+	<script type="text/javascript" src="js/qiniu.js"></script>
+	<script src="js/plupload.min.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<!-- jqprint -->
+	<script type="text/javascript"  src="BJUI/plugins/print/jquery.jqprint-0.3.js"></script>
+	<!-- jqprint jq低版本兼容 -->
+	<script type="text/javascript"  src="BJUI/plugins/print/jquery-migrate-1.2.1.min.js"></script>
+	<!--
+	<script src="BJUI/js/bjui-core.js"></script>
+	<script src="BJUI/js/bjui-regional.zh-CN.js"></script>
+	<script src="BJUI/js/bjui-frag.js"></script>
+	<script src="BJUI/js/bjui-extends.js"></script>
+	<script src="BJUI/js/bjui-basedrag.js"></script>
+	<script src="BJUI/js/bjui-slidebar.js"></script>
+	<script src="BJUI/js/bjui-contextmenu.js"></script>
+	<script src="BJUI/js/bjui-navtab.js"></script>
+	<script src="BJUI/js/bjui-dialog.js"></script>
+	<script src="BJUI/js/bjui-taskbar.js"></script>
+	<script src="BJUI/js/bjui-ajax.js"></script>
+	<script src="BJUI/js/bjui-alertmsg.js"></script>
+	<script src="BJUI/js/bjui-pagination.js"></script>
+	<script src="BJUI/js/bjui-util.date.js"></script>
+	<script src="BJUI/js/bjui-datepicker.js"></script>
+	<script src="BJUI/js/bjui-ajaxtab.js"></script>
+	<script src="BJUI/js/bjui-datagrid.js"></script>
+	<script src="BJUI/js/bjui-tablefixed.js"></script>
+	<script src="BJUI/js/bjui-tabledit.js"></script>
+	<script src="BJUI/js/bjui-spinner.js"></script>
+	<script src="BJUI/js/bjui-lookup.js"></script>
+	<script src="BJUI/js/bjui-tags.js"></script>
+	<script src="BJUI/js/bjui-upload.js"></script>
+	<script src="BJUI/js/bjui-theme.js"></script>
+	<script src="BJUI/js/bjui-initui.js"></script>
+	<script src="BJUI/js/bjui-plugins.js"></script>
+	<!-- plugins -->
+	<!-- swfupload for uploadify && kindeditor -->
+	<script src="BJUI/plugins/swfupload/swfupload.js"></script>
+	<!-- kindeditor -->
+	<script src="BJUI/plugins/kindeditor_4.1.10/kindeditor-all.js"></script>
+	<script src="BJUI/plugins/kindeditor_4.1.10/lang/zh_CN.js"></script>
+	<!-- colorpicker -->
+	<script src="BJUI/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+	<!-- ztree -->
+	<script src="BJUI/plugins/ztree/jquery.ztree.all-3.5.js"></script>
+	<!-- nice validate -->
+	<script src="BJUI/plugins/niceValidator/jquery.validator.js"></script>
+	<script src="BJUI/plugins/niceValidator/jquery.validator.themes.js"></script>
+	<!-- bootstrap plugins -->
+	<script src="BJUI/plugins/bootstrap.min.js"></script>
+	<script src="BJUI/plugins/bootstrapSelect/bootstrap-select.min.js"></script>
+	<script src="BJUI/plugins/bootstrapSelect/defaults-zh_CN.min.js"></script>
+	<!-- icheck -->
+	<script src="BJUI/plugins/icheck/icheck.min.js"></script>
+	<!-- dragsort -->
+	<script src="BJUI/plugins/dragsort/jquery.dragsort-0.5.1.min.js"></script>
+	<!-- HighCharts -->
+	<script src="BJUI/plugins/highcharts/highcharts.js"></script>
+	<script src="BJUI/plugins/highcharts/highcharts-3d.js"></script>
+	<script src="BJUI/plugins/highcharts/themes/gray.js"></script>
+	<!-- ECharts -->
+	<script src="BJUI/plugins/echarts/echarts.js"></script>
+	<script src="BJUI/plugins/echarts/chart/funnel.js"></script>
+	<!-- other plugins -->
+	<script src="BJUI/plugins/other/jquery.autosize.js"></script>
+	<link href="BJUI/plugins/uploadify/css/uploadify.css" rel="stylesheet">
+	<script src="BJUI/plugins/uploadify/scripts/jquery.uploadify.min.js"></script>
+	<script src="BJUI/plugins/download/jquery.fileDownload.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/erp.css">
+	<!--DavidWang加入code -->
+	<script src="BJUI/plugins/qrcode/jquery.qrcode.min.js"></script>
+
+	<script type="text/javascript" src="dwr/engine.js"></script>
+	<script type="text/javascript" src="dwr/util.js"></script>
+	<script type="text/javascript" src="dwr/interface/MessagePush.js"></script>
+	<script type="text/javascript" src="js/pcm_to_wav.js"></script>
+	<script type="text/javascript" src="js/downloadhtml.js"></script>
+	<script type="text/javascript" src="js/CommonUtils.js"></script>
+	<script type="text/javascript" src="js/dataJs.js"></script>
+	<script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>
+	<style type="text/css">
+		.bjui-notice {
+			background-image: url('images/tips.png');
+			width: 320px;
+			height: 159px;
+			padding-top: 26px;
+			padding-left: 20px;
+		}
+		.p-notice {
+			font-size: 15px;
+			color: white;
+		}
+		/* basic style */
+		.noticeClose {
+			/* still bad on picking color */
+			background: orange;
+			color: red;
+			/* make a round button */
+			border-radius: 16px;
+			/* center text */
+			line-height: 20px;
+			text-align: center;
+			height: 20px;
+			width: 20px;
+			font-size: 18px;
+			padding: 1px;
+			opacity: 1.2;
+		}
+		/* use cross as close button */
+		.noticeClose::before {
+			content: "\2716";
+		}
+		/* place the button on top-right */
+		.noticeClose {
+			top: -28px;
+			right: -11px;
+			position: absolute;
+		}
+	</style>
+	<script>
+		/*var client=new OSS.Wrapper({
+		    region:'oss-cn-beijing.aliyuncs.com',
+				accessKeyId:'LTAIhlNjwcLW2C4d',
+			accessKeySecret:'2EHrR2Hgql4pqWvarcFYAbz9f1o2gw',
+			bucket:'miaomiao-image'
+		})
+
+        function add0(m){
+            return m<10?'0'+m : m;
+        }
+
+        //OSS  文件对象名
+        function timestamp(){
+            var time = new Date();
+            var y = time.getFullYear();
+            var m = time.getMonth()+1;
+            var d = time.getDate();
+            var h = time.getHours();
+            var mm = time.getMinutes();
+            var s = time.getSeconds();
+
+            console.log(y);
+
+            return ""+y+add0(m)+add0(d)+add0(h)+add0(mm)+add0(s);
+        }
+
+        function on_click_upload_file(){
+
+            var f = document.getElementById("file").files[0];
+            console.log(f.name);
+            var val= document.getElementById("file").value;
+            var suffix = val.substr(val.indexOf("."));
+            var obj=timestamp();  // 这里是生成文件名
+
+
+            var storeAs = 'mm/'+"/"+obj+suffix;  //命名空间
+            console.log(' => ' + storeAs);
+
+
+            client.multipartUpload(storeAs, f).then(function (result) {
+                console.log(result); /!*返回对象*!/
+                console.log(result.url); /!*返回链接*!/
+            }).catch(function (err) {
+                console.log(err);
+            });
+        }
+*/
+        $(function () {
+
+
+			if ($.cookie('username')==null) {
+				$("html").empty();
+				window.location.href = 'login.html';
+			}
+			jQuery.support.cors = true;
+			BJUI.init({
+				JSPATH: 'BJUI/',         //[可选]框架路径
+				PLUGINPATH: 'BJUI/plugins/', //[可选]插件路径
+				loginInfo: {url: 'login.html', title: '登录', width: 400, height: 200}, // 会话超时后弹出登录对话框
+				statusCode: {ok: 200, error: 300, timeout: 10001}, //[可选]
+				ajaxTimeout: 100000, //[可选]全局Ajax请求超时时间(毫秒)
+				pageInfo: {
+					total: 'total',
+					pageCurrent: 'pageCurrent',
+					pageSize: 'pageSize',
+					orderField: 'orderField',
+					orderDirection: 'orderDirection'
+				}, //[可选]分页参数
+				alertMsg: {displayPosition: 'topcenter', displayMode: 'slide', alertTimeout: 3000}, //[可选]信息提示的显示位置，显隐方式，及[info/correct]方式时自动关闭延时(毫秒)
+				keys: {statusCode: 'state', message: 'content'}, //[可选]
+				ui: {
+					windowWidth: 0, //框架显示宽度，0=100%宽，> 600为则居中显示
+					showSlidebar: true, //[可选]左侧导航栏锁定/隐藏
+					clientPaging: true, //[可选]是否在客户端响应分页及排序参数
+					overwriteHomeTab: false //[可选]当打开一个未定义id的navtab时，是否可以覆盖主navtab(我的主页)
+				},
+				debug: false,    // [可选]调试模式 [true|false，默认false]
+				theme: 'green' // 若有Cookie['bjui_theme'],优先选择Cookie['bjui_theme']。皮肤[五种皮肤:default, orange, purple, blue, red, green]
+			});
+			var saveSeconds = 0;
+			//时钟
+			var today = new Date(), time = today.getTime();
+			$('#bjui-date').html(today.formatDate('yyyy/MM/dd'));
+			setInterval(function () {
+				today = new Date(today.setSeconds(today.getSeconds() + 1));
+				$('#bjui-clock').html('   '+today.formatDate('HH:mm:ss'));
+			}, 1000);
+			/*var intDiff = parseInt(1500);//倒计时总秒数量 25分钟
+			function customer_timer(intDiff) {
+				window.setInterval(function () {
+					var day, hour, minute, second;//时间默认值
+					if (intDiff >= 0) {
+						day = Math.floor(intDiff / (60 * 60 * 24));
+						hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+						minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+						second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+						if (minute == 0 && second == 0) {
+							$.ajax({
+								url: '/v1/user/login_refresh',
+								dataType: 'json',
+								type: 'POST',
+								xhrFields: {
+									withCredentials: true
+								},
+								crossDomain: true,
+								success: function (data) {
+									if (data.state == 200) {
+										customer_timer(1500);
+									}
+								}
+							});
+						} else {
+							$('#day_show').html(day + "天");
+							$('#hour_show').html('<s id="h"></s>' + hour + '时');
+							$('#minute_show').html('<s></s>' + minute + '分');
+							$('#second_show').html('<s></s>' + second + '秒');
+							localStorage.setItem("timeNmu", intDiff);
+						}
+						intDiff--;
+					}
+				}, 1000);
+			}
+			var timeStorage = localStorage.getItem("timeNmu");
+			if (timeStorage != null) { //刷新时
+				customer_timer(timeStorage);
+			} else { //第一次进入页面
+				customer_timer(intDiff);
+			}*/
+			$("#customer_timeout").click(function () {
+				//退出登录,删除cookie
+				window.location.href = 'login.html';
+				$.cookie("token",null, {path: '/'});
+				$.cookie("username",null, {path: '/'});
+				$.cookie("flowerName",null, {path: '/'});
+				$.cookie("phone",null, {path: '/'});
+				$.cookie("email",null, {path: '/'});
+				$.cookie("type",null, {path: '/'});
+			})
+			$("#customer_fllowName").text("欢迎您，" +$.cookie('flowerName') + "!");
+			/*$.ajax({
+				url: '/v1/other/getversion',
+				dataType: 'json',
+				type: 'GET',
+				data:{
+					code:'1.0.6.5'
+				},
+				xhrFields: {
+					withCredentials: true
+				},
+				crossDomain: true,
+				success: function(data){
+					if(data.state == 8888) {
+						$.cookie('refresh', '1', { path: '/', expires: 15 });
+						window.location.reload();
+					}
+				},
+				error: function(){
+				}
+			});*/
+			initrole();
+			function initrole() {
+				var userId=$.cookie("userId");
+				$.ajax({
+					url:"http://127.0.0.1:8280/manager/getUserRight",
+					data:{token:$.cookie('token')},
+					type:'post',
+					success:function(d){
+						var $menuBar =$("#bjui-hnav-navbar");
+						for (var data of d.model){
+							if(data.parentid==0){
+								$menuBar.append('<li class="" id ="top_menu_'+data.id+'"><a href="javascript:;" data-toggle="slidebar">'+data.rightname+'</a>');
+							}else {
+								if(data.righttype==1){
+									var $menuDiv = $("#menu_"+data.parentid).html();
+									var _thisMenu = '<li><a href="'+data.menupath+'" data-toggle="navtab" data-options="{id:\'form-input_'+data.id+'\', faicon:\'th-large\'}">'+data.rightname+'</a></li>';
+									if($menuDiv){
+										$("#menu_"+data.parentid).append(_thisMenu);
+									}else{
+										$("#top_menu_"+data.parentid).append('<div class="items hide" data-noinit="true"> <ul class="menu-items" data-faicon="hand-o-up" id="menu_'+data.parentid+'">'+_thisMenu+'</ul></div>') ;
+									}
+								}
+							}
+						}
+						$menuBar.find('li :eq(1)').click();
+					}
+				});
+			}
+		});
+	</script>
+	</head>
+<body>
+	<header id="bjui-header">
+	<div class="bjui-navbar-header">
+		<p style="font-size: 20px; color: white; padding: 7px 0px 0px 5px;">
+			<img src="images/logo.png" />
+		</p>
+	</div>
+	<!-- 快捷菜单(消息、用户信息、切换皮肤) -->
+	<nav id="bjui-navbar-collapse" class="">
+		<ul class="bjui-navbar-right">
+			<li class="datetime">
+				<div>
+					<span id="bjui-date"></span><span id="bjui-clock"></span>
+				</div>
+			</li>
+			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">我的账户 <span class="caret"></span></a>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="updatePwd.html" data-toggle="dialog" data-id="changepwd_page" data-mask="true" data-width="700" data-height="400">&nbsp;<span class="glyphicon glyphicon-lock"></span> 修改密码&nbsp;</a></li>
+					<li><a href="#" id="myInfo" onclick="clickOnMyInfo()">&nbsp;<span class="glyphicon glyphicon-user"></span> 我的资料</a></li>
+					<li class="divider"></li>
+					<li><a id="customer_timeout" class="red">&nbsp;<span class="glyphicon glyphicon-off"></span>
+						注销登陆
+					</a></li>
+				</ul>
+			</li>
+			<li class="dropdown"><a href="#" class="dropdown-toggle theme orange" data-toggle="dropdown" title="切换皮肤"><i class="fa fa-tree"></i></a>
+				<ul class="dropdown-menu" role="menu" id="bjui-themes">
+					<li class=""><a href="javascript:;" class="theme_default" data-toggle="theme" data-theme="default">
+						&nbsp;
+						<i class="fa fa-tree"></i> 黑白分明&nbsp;&nbsp;</a></li>
+					<li class="active"><a href="javascript:;" class="theme_orange" data-toggle="theme" data-theme="orange">&nbsp;<i class="fa fa-tree"></i> 橘子红了</a></li>
+					<li class=""><a href="javascript:;" class="theme_purple" data-toggle="theme" data-theme="purple">
+						&nbsp;
+						<i class="fa fa-tree"></i> 紫罗兰</a></li>
+					<li class=""><a href="javascript:;" class="theme_blue" data-toggle="theme" data-theme="blue">
+						&nbsp;
+						<i class="fa fa-tree"></i> 天空蓝</a></li>
+					<li class=""><a href="javascript:;" class="theme_green" data-toggle="theme" data-theme="green">
+						&nbsp;
+						<i class="fa fa-tree"></i> 绿草如茵</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div id="bjui-hnav">
+		<!-- 横向菜单 -->
+		<ul id="bjui-hnav-navbar">
+			<li style="width:204px;"><a id="customer_fllowName"></a></li>
+		</ul>
+	</div>
+
+	<div id="notice" style="margin-left: 75%; margin-top: 4%; z-index: 1; position: absolute;">
+	</div>
+</header>
+<div id="bjui-container" class="clearfix">
+	<div id="bjui-leftside">
+		<!-- 导航栏 -->
+		<div id="bjui-sidebar-s" style="height: 100%;">
+			<div class="collapse">
+			</div>
+		</div>
+		<div id="bjui-sidebar" style="height: 100%; overflow: scroll;">
+			<div class="toggleCollapse">
+				<h2>
+					<i class="fa fa-bars"></i> 导航栏
+					<i class="fa fa-bars"></i>
+				</h2>
+				<a class="lock" href="javascript:;" data-original-title="" title="">
+					<i class="fa fa-lock"></i>
+				</a>
+			</div>
+			<div id="bjui-accordionmenu" class="panel-group panel-main collapse in" data-toggle="accordion" style="">
+			</div>
+		</div>
+		<div id="bjui-splitBarProxy" style="height: 100%;">
+		</div>
+		<div id="bjui-splitBar" style="height: 100%; display: block;">
+		</div>
+	</div>
+	<footer id="bjui-footer">
+		<!-- 页脚 -->
+	</footer>
+	<div id="bjui-navtab" class="tabsPage">
+		<div class="tabsPageHeader">
+			<div class="tabsPageHeaderContent">
+				<ul class="navtab-tab nav nav-tabs">
+					<li><a href="javascript:;"><span>我的主页</span></a></li>
+				</ul>
+			</div>
+			<div class="tabsLeft">
+				<i class="fa fa-angle-double-left"></i>
+			</div>
+			<div class="tabsRight">
+				<i class="fa fa-angle-double-right"></i>
+			</div>
+			<div class="tabsMore">
+				<i class="fa fa-angle-double-down"></i>
+			</div>
+		</div>
+		<ul class="tabsMoreList">
+			<li><a href="javascript:;">我的主页</a></li>
+		</ul>
+		<div class="navtab-panel tabsPageContent">
+			<div class="navtabPage unitBox">
+				<!-- 主页内容 -->
+				<div class="bjui-pageHeader" style="background:#FFF;">
+					<div style="padding: 0 15px;">
+						<h4 style="margin-bottom:20px;">
+							喵喵后台管理系统　
+							<small>轻松办公，专注您的业务，从喵喵后台管理系统开始！</small>
+						</h4>
+						<div style="float:left; width:157px;">
+							<div class="alert alert-info" role="alert" style="margin:0 0 5px; padding:10px;">
+								<img src="images/android.png" width="135">
+							</div>
+						</div>
+						<div style="float:left; width:157px; margin-left: 5px;">
+							<div class="alert alert-info" role="alert" style="margin:0 0 5px; padding:10px;">
+								<img src="images/ios.png" width="135">
+							</div>
+						</div>
+						<div class="row" style="margin-left:190px; margin-top:10px;">
+							<div class="col-md-6" style="padding:0px 5px 0px 5px;">
+								<div class="alert alert-success" role="alert" style="margin:0 0 5px; padding:5px 15px; height: 196px;">
+									<strong>喵喵后台管理系统!</strong>
+									<br>
+									<span class="label label-default">官方网站：</span><a href="http://127.0.0.1:8020/mm/index.html" target="_blank">http://127.0.0.1:8020/mm/index.html</a>
+									<br>
+									<span class="label label-default">后台管理网站：</span><a href="http://127.0.0.1:8020/mmManageNew/index1.html" target="_blank">http://127.0.0.1:8020/mmManageNew/login.html</a>
+									<br>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bjui-pageContent">
+						<div style="margin-top:5px; overflow:hidden;">
+							<div class="row" style="padding: 0 8px;">
+								<div class="col-md-12">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h3 class="panel-title">当前版本：<code>V1.0.6.5</code>　最近更新日志(2017-12-29)：</h3>
+										</div>
+										<div class="panel-body bjui-doc" style="padding:5px;">
+											<ul>
+												<li>[新增]草签合同</li>
+												<li>[修复]收款部分查询BUG</li>
+												<li>[优化]定金协议号/合同号修改</li>
+												<li>[新增]预售退款</li>
+												<li>[修复]POS线上付款后客户状态同步更新</li>
+												<li>[优化]渠道统计报表</li>
+												<li>[优化]意向类型新增及调整</li>
+												<li>[新增]工程管理,新增工程助理模块</li>
+												<li>[优化]自动分配策略</li>
+												<li>[新增]编辑合同默认绑定工程模板</li>
+												<li>[新增]客户管理(总助)添加分配订单时间(派单时间)</li>
+												<li>[新增]客户管理(美客/总助/前台),新增实际到场时间</li>
+												<li>[新增]合同收款界面调整,新增预售抵扣</li>
+												<li>[新增]客户管理(美客)</li>
+												<li>[新增]客户管理(新媒体)</li>
+												<li>[新增]客户管理(回收池)</li>
+												<li>[新增]加入渠道推广导入功能</li>
+												<li>[新增]加入新客户档案(没课)</li>
+												<li>[新增]权限管理模块配置表单</li>
+												<li>[修复]名称表单长度问题</li>
+												<li>[新增]SEM模块加入</li>
+												<li>[新增]仓库模块</li>
+												<li>[新增]退货模块</li>
+												<li>[新增]加入SEM的标记</li>
+												<li>[修复]修改渠道数据筛选和字段缺失</li>
+												<li>[修复]加入美客主管角色权限和功能菜单</li>
+												<li>[修复]加入SEM角色权限和功能菜单</li>
+												<li>[修复]修改采购管理细节BUG</li>
+												<li>[修复]修改仓库管理细节BUG</li>
+												<li>[修复]料品管理中各种细节BUG</li>
+												<li>[重要通知]发货申请,细节调整</li>
+												<li>[重要通知]人员管理只能人事操作</li>
+												<li>[修复]人员档案新增修改</li>
+												<li>[重要通知]仓库料品上线</li>
+												<li>[新增]加入组织管理档案</li>
+												<li>[修复]修改仓库信息以及采购</li>
+												<li>[修复]料品档案修改,以及BUG修复</li>
+												<li>[重要更新]修改料品编辑细节,更加便捷方便</li>
+												<li>[重要更新]完成料品采购模块</li>
+												<li>[重要更新]合并仓库模块</li>
+												<li>[新增]收款类型增加补款</li>
+												<li>[新增]合同日期、设计师、客户经理手工录入</li>
+												<li>[新增]首款金额自动计算</li>
+												<li>[新增]合同录入后更新收款单的合同号</li>
+												<li>[新增]合同编辑界面显示收款单</li>
+												<li>[新增]合同开工日期非必填</li>
+												<li>[新增]登陆界面提醒文字修改</li>
+												<li>[新增]增加角色31</li>
+												<li>[重要更新]合并采购仓库管理模块</li>
+												<li>[重要更新]料品仓库管理档案</li>
+												<li>[重要更新]修改细节BUG!</li>
+												<li>[重要更新]表单固定表头,查阅更加信息的明了!</li>
+												<li>[新增]基础档案中加入料品分类(列表,表单,新增,编辑)!</li>
+												<li>[修复]收款单导入,以及网站预约未付款用户不再显示在收款单内</li>
+												<li>[修复]分配表单编辑后,列表消失问题!</li>
+												<li>[修复]编辑客户已存在手机号,应该提示已存在!</li>
+												<li>[重要更新]新员工第二次编辑,会更新上一次编辑记录哦(*^__^*) 嘻嘻……!!!</li>
+												<li>[重要更新]更新人员档案列表以及编辑和更新,加入HR确认,新员工编辑,导出功能!</li>
+												<li>[修复]修复客户档案来源无法选择问题!</li>
+												<li>[重要更新]加入成交记录,分配角色查看权限,以及数据权限</li>
+												<li>[修复]更新分配表更新内容</li>
+												<li>[修复]修改细节字段!</li>
+												<li>[重要更新]各大菜单编辑内容有时无法显示问题!!</li>
+												<li>[重要更新]所有带编辑的表单,可以双击进入编辑界面</li>
+												<li>[修复]数据内容格式问题</li>
+												<li>[修复]客户经理(主管转销售转设计)过滤无效人员</li>
+												<li>[修复]客户列表以预约时间倒序</li>
+												<li>[新增]美小蜜通知功能</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+			<!-- 各页片内容区域 -->
+		</div>
+		<div id="show_images"><ul id="viewer_ul" class="v-pictures" style="display: none;"></ul></div>
+	</div>
+</div>
+<script>
+    function onclick_showImages(images) {
+        var urls= new Array();
+        urls=images.split(",");
+        var size = urls.length ;
+        $('#viewer_ul li').each(function(){
+            $(this).remove();
+        });
+        //$('#viewer_ul').children().filter('li').remove();
+        var html = "";
+        for (var i = 0; i < size ; i++) {
+            html += "<li><img style=\"height:50px;width: 50px;\" data-original=\""+urls[i]+"\" src=\""+urls[i]+"\" alt=\"Picture"+i+"\"></li>";
+        }
+        $('#viewer_ul').append(html);
+		onclick_show();
+    }
+	function onclick_show() {
+        var $images = $('.v-pictures');
+        $images.viewer("destroy"); // 注意:动态更新须销毁
+        $images.viewer({url: 'data-original'});
+        $images.viewer('show');
+    }
+</script>
+</body>
+</html>

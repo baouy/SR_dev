@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>浙江树人大学素质拓展分系统</title>
+<meta name="renderer" content="webkit">
+<script src="B-JUI/js/jquery-1.11.3.min.js"></script>
+<script src="B-JUI/js/jquery.cookie.js"></script>
+<link href="B-JUI/themes/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+html, body { height: 100%; overflow: hidden; }
+body {
+    font-family: "Verdana", "Tahoma", "Lucida Grande", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+    background: url(images/sr_bg2.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.form-control{height:37px;}
+.main_box{position:absolute; top:45%; left:50%; margin:-200px 0 0 -180px; padding:15px 20px; width:360px; height:400px; min-width:320px; background:#FAFAFA; background:rgba(255,255,255,0.5); box-shadow: 1px 5px 8px #888888; border-radius:6px;}
+.login_msg{height:30px;}
+.input-group >.input-group-addon.code{padding:0;}
+#captcha_img{cursor:pointer;}
+.main_box .logo img{height:35px;}
+@media (min-width: 768px) {
+    .main_box {margin-left:-240px; padding:15px 55px; width:480px;}
+    .main_box .logo img{height:40px;}
+}
+</style>
+<script type="text/javascript">
+$(function(){
+    //初始化账号密码(记住密码的情况下)
+    if ($.cookie('rememberUser')!=''&&$.cookie('rememberPwd')!=''){
+        $("#j_username").val( $.cookie('rememberUser'));
+        $("#j_password").val($.cookie('rememberPwd'));
+        $("#j_remember").attr("checked","checked");//上一次记住密码则选中
+    }
+   /* if ($.cookie('rememberPwd')==''||$.cookie('rememberPwd')==null||$.cookie('rememberPwd')==undefined)
+        $("#j_remember").attr("checked",false);//上一次未记住密码则初始化未选中
+    }*/
+
+
+	//隐藏找回密码区域
+	$("#findpwddiv").hide();
+    //choose_bg();
+    //登录功能
+    $("#doLogin").click(function(){
+    	var userName=$("#j_username").val();
+		var passWord=$("#j_password").val();
+        //是否记住密码
+        if ($("#j_remember").is(':checked')){
+            debugger;
+            $.cookie('rememberUser',userName,{ path: '/', expires: 10 });
+            $.cookie('rememberPwd',passWord,{ path: '/', expires: 10 });
+        }
+        else {//记住密码没勾选就删除cookie
+            $.cookie('rememberUser',null,{ path: '/' });
+            $.cookie('rememberPwd',null,{ path: '/' });
+        }
+	$.ajax({
+		type:"post",
+		url:"/manage/PCAdmin_login",
+		data:{'userName':userName,
+			  'password':passWord},
+		dataType:'json',
+		success:function(res){
+			if(res.code==1002){
+				$("#login_msg").html("用户名或密码不能为空");
+			}if(res.code==2004){
+				$("#login_msg").html(res.msg);
+			}if(res.code==2003){
+				$("#login_msg").html(res.msg);
+			}if(res.code==1001){
+				debugger;
+				//登录成功，1秒后跳转
+				$("#login_msg").html('登录成功,1秒后跳转到主页');
+				//存储token和用户id
+				debugger;
+				$.cookie("token",res.model.token.token);
+				$.cookie("userId",res.model.shopAdmin.id);
+				$.cookie("username",res.model.shopAdmin.username);
+				$.cookie("flowerName",res.model.shopAdmin.flowerName);
+				$.cookie("phone",res.model.shopAdmin.phone);
+				$.cookie("email",res.model.shopAdmin.email);
+				$.cookie("type",res.model.shopAdmin.type);
+                $.cookie("role",res.model.shopAdmin.roleName);
+                $.cookie("shopId",res.model.shopAdmin.shopId);
+				/*
+				sessionStorage.setItem('token',JSON.stringify(res.model.token.token));
+				sessionStorage.setItem('user',JSON.stringify(res.model.shopAdmin));*/
+				setTimeout(function(){
+					location.href="index1.html";
+				},1000)
+				
+			}
+		}
+	});
+    });
+});
+//更换背景
+function choose_bg() {
+    var bgNum = Math.floor(Math.random() * 6 + 1);
+    $('body').css('background-image', 'url(images/sr_bg'+ bgNum +'.jpg)');
+}
+//重置按钮
+function reset(){
+	$("#j_username").val('');
+	$("#j_password").val('');
+}
+//
+function findpwd(){
+	$("#findpwddiv").show();
+}
+	
+</script>
+</head>
+<body>
+<div class="container">
+    <div class="main_box">
+            <p class="text-center logo"><img src="images/sr_logo.png" height="70"></p>
+            <div  class="login_msg text-center"><font id="login_msg" color="red"></font></div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon-user"><span id='#userMes' class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" id="j_username" name="username" value="" placeholder="登录账号" aria-describedby="sizing-addon-user">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon" id="sizing-addon-password"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input type="password" class="form-control" id="j_password" name="passwordhash" placeholder="登录密码" aria-describedby="sizing-addon-password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label for="j_remember" class="m"><input id="j_remember" type="checkbox" value="true">&nbsp;记住密码!</label>
+                </div>
+                <div>
+                	<a href="#" onclick="findpwd()">忘记密码?点击找回</a>
+                </div>
+                <div id="findpwddiv">
+                		<table class="table table-condensed table-hover">
+							<tbody>
+								<tr style="height: 40px;background-color:#D0D0D0">
+									<td><label class="control-label" style="font-size:18px;">找回密码</label></td>
+								</tr>
+								<tr style="height: 38px">
+											<td>
+												<label class="control-label x130" style="font-size:18px;">请输入手机号</label>
+												<input type="text" id="type" readonly="readonly" name="phone" value="" size="20"
+													   style="margin-left: 70px;"><span><a>点击收取验证码</a></span>
+											</td>
+								</tr>
+								<tr>
+											<td>
+												<label class="control-label x130" style="font-size:18px;">请输入验证码</label>
+												<input type="text" id="yzm" name="yzm" value="" size="20"
+													   style="margin-left: 70px;">
+											</td>
+								</tr>
+							</tbody>
+						</table>
+                </div>
+                <div class="checkbox">
+                    
+                </div>
+            </div>
+            <div class="text-center">
+                <button  id="doLogin" class="btn btn-primary btn-lg">&nbsp;登&nbsp;录&nbsp;</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                <button onclick="reset(	)" class="btn btn-default btn-lg">&nbsp;重&nbsp;置&nbsp;</button>
+         
+            </div>
+            <div class="text-center">
+                <hr>
+                2017 - 2018 <a href="#"  onclick="choose_bg()">浙江树人大学素质拓展分系统</a>
+            </div>
+    </div>
+</div>
+</body>
+</html>
